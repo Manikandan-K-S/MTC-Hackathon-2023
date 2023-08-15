@@ -1,0 +1,57 @@
+{% load static %}
+{% include 'nav.html' %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Challenge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Add CSS styling to make the image square */
+        .challenge-image {
+            width: 100%;
+            height: auto;
+            max-width: 300px; /* Limit the maximum width of the image */
+            display: block; /* Center the image horizontally */
+            margin: 0 auto;
+        }
+
+        /* Add color gradient background */
+        body {
+            background: linear-gradient(to right, #E8F6E8, #FFFFFF);
+            font-family: 'Lato', sans-serif; /* Apply custom font */
+        }
+
+        .container {
+            background: linear-gradient(to bottom, #F0FFF0, #E0FFFF);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            text-align: center; /* Center text horizontally */
+        }
+
+        .challenge-title {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1 class="challenge-title">Random Challenge</h1>
+        <div class="text-center">
+            <img src="{% static 'challenges/'|add:challenge.image %}" alt="Challenge Image" class="img-fluid challenge-image">
+        </div>
+        <h2>{{ challenge.title }}</h2>
+        <p>{{ challenge.description }}</p>
+        <button class="btn btn-primary" onclick="location.reload();">Get Another Challenge</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

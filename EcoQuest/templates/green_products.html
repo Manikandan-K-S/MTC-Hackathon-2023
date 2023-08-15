@@ -1,0 +1,215 @@
+{% load static %}
+{% include 'nav.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eco-Friendly Products</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #E8F6E8, #FFFFFF);
+            font-family: 'Lato', sans-serif;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #2E8540;
+        }
+
+        p {
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        img {
+            max-width: 200px;
+            height: auto;
+        }
+        
+        .btn-back {
+            margin-top: 20px;
+            background-color: #2E8540;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-back:hover {
+            background-color: #1E6E30;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-5">Eco-Friendly Products</h1>
+
+        <!-- Section 1: Areca Palm Leaf Disposable Dinnerware -->
+        <section class="my-5">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>Areca Palm Leaf Disposable Dinnerware</h2>
+                    <p>Such products are made from areca palm leaves which are soft, soluble and a good alternative to paper plates...</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="{% static 'products/p1.jpg' %}" alt="Areca Palm Leaf Dinnerware" class="img-fluid">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Disposable products from bagasse -->
+        <section class="my-5">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>Disposable products from bagasse</h2>
+                    <p>The second category of eco-friendly products are those made from bagasse – which is the dry remnant of sugarcane after the juice has been extracted...</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="{% static 'products/p2.jpg' %}" alt="Bagasse Disposable Products" class="img-fluid">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Recycled tetra paks -->
+        <section class="my-5">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>Recycled Tetra Paks</h2>
+                    <p>Next on the list are products made from recycled tetra paks such as milk and juice cartons...</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="{% static 'products/p3.jpg' %}" alt="Recycled Tetra Paks" class="img-fluid">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Recycled PET fabric -->
+        <section class="my-5">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>Recycled PET Fabric</h2>
+                    <p>Disposable PET water bottles that would otherwise end up in landfills are shredded, turned into yarn and made into fabric...</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="{% static 'products/p4.jpg' %}" alt="Recycled PET Fabric" class="img-fluid">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Organic cotton -->
+        <section class="my-5">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>Organic Cotton</h2>
+                    <p>Organic cotton differentiates from regular cotton majorly because of how it is grown, i.e., without using any pesticides and insecticides...</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="{% static 'products/p5.jpg' %}" alt="Organic Cotton" class="img-fluid">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Mango wood products -->
+        <section class="my-5">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>Mango Wood Products</h2>
+                    <p>Mango wood is a moderately hard, heavy and strong wood with a yellowish white to greyish brown color...</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="{% static 'products/p6.jpg' %}" alt="Mango Wood Products" class="img-fluid">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Jute -->
+        <section class="my-5">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>Jute</h2>
+                    <p>India is the largest jute producing country in the world, with annual production estimated at more than 1.968 million tons...</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="{% static 'products/p7.jpg' %}" alt="Jute" class="img-fluid">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Next-gen plant-based materials -->
+        <section class="my-5">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>Next-gen Plant-based Materials</h2>
+                    <p>Plant-based materials are a great alternative to genuine leather and manmade materials...</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="{% static 'products/p8.jpg' %}" alt="Next-gen Plant-based Materials" class="img-fluid">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 9: Eco-friendly packaging materials -->
+        <section class="my-5">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>Eco-friendly Packaging Materials</h2>
+                    <p>Increasingly, manufacturers in India are moving away from plastic-based packaging materials and trying to offer more biodegradable and natural options...</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="{% static 'products/p9.jpg' %}" alt="Eco-friendly Packaging Materials" class="img-fluid">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 10: Plantable seed stationery -->
+        <section class="my-5">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>Plantable Seed Stationery</h2>
+                    <p>Stationery that grows into plants is unique, appealing and eco-friendly...</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="{% static 'products/p10.jpg' %}" alt="Plantable Seed Stationery" class="img-fluid">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 11: Upcycled materials -->
+        <section class="my-5">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>Upcycled Materials</h2>
+                    <p>Upcycling materials are on-trend among manufacturers in India...</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="{% static 'products/p11.jpg' %}" alt="Upcycled Materials" class="img-fluid">
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation button to move to the top -->
+        <div class="text-center mb-5">
+            <button class="btn btn-back" onclick="scrollToTop()">Back to Top</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Smooth scroll to top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

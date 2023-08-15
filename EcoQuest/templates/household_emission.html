@@ -1,0 +1,66 @@
+
+{% include 'nav.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Household Carbon Emission Calculator </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #E8F6E8, #FFFFFF);
+            font-family: 'Lato', sans-serif;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .custom-button {
+            background-color: #2E8540;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s, padding 0.3s;
+        }
+
+        .custom-button:hover {
+            background-color: #1E6E30;
+            padding: 14px 26px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1 class="mt-5"> Calculate Household Carbon Emission </h1>
+        <form id="carbonHouseholdForm" class="mt-4">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="electricityConsumption">Electricity Consumption (unit):</label>
+                <input type="number" class="form-control" id="electricityConsumption" name="electricityConsumption" required>
+            </div>
+            <div class="mt-3">
+                <button type="button" id="calculateHouseholdEmission" class="custom-button">Calculate</button>
+                <a href="{% url 'landing' %}" class="btn btn-secondary ml-2" id="backToLanding">Back</a>
+            </div>
+        </form>
+        <p id="householdEmissionResult" class="mt-4"></p>
+    </div>
+
+    <script>
+        document.getElementById('calculateHouseholdEmission').addEventListener('click', function () {
+            var electricityConsumption = parseFloat(document.getElementById('electricityConsumption').value);
+            var emissionFactor = 0.417; // Conversion factor: lbs to kgs
+            var householdEmission = electricityConsumption * emissionFactor;
+            document.getElementById('householdEmissionResult').innerText = 'Carbon Emission (kgs): ' + householdEmission.toFixed(2);
+        });
+    </script>
+</body>
+</html>

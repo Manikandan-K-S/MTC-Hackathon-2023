@@ -1,0 +1,103 @@
+{% load static %}
+{% include 'nav.html' %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Carbon Footprint</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #E8F6E8, #FFFFFF);
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header-container {
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            flex-wrap: wrap; /* Add flex-wrap property */
+        }
+
+        .custom-button {
+            background-color: #2E8540;
+            color: white;
+            border: none;
+            padding: 8px 16px; /* Adjust padding */
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px; /* Adjust font-size */
+            transition: background-color 0.3s, padding 0.3s;
+            margin: 10px; /* Add margin to separate buttons */
+            width: 45%; /* Adjust width */
+            max-width: 220px; /* Add max-width for smaller screens */
+        }
+
+        .custom-button:hover {
+            background-color: #1E6E30;
+            padding: 10px 18px; /* Adjust padding */
+        }
+
+        .svg-icon {
+            width: 60px; /* Adjust icon size */
+            height: 60px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .content-container {
+            padding: 40px;
+            background-color: #FFFFFF;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="content-container container mt-5">
+    <div class="header-container">
+        <h1>Carbon Footprint Calculator</h1>
+        <div class="button-container">
+            <a href="{% url 'carbon_car' %}" class="custom-button">
+                <img src="https://www.svgrepo.com/show/452176/car.svg" alt="Car" class="svg-icon"> Car
+            </a>
+            <a href="{% url 'carbon_household' %}" class="custom-button">
+                <img src="https://www.svgrepo.com/show/513309/house.svg" alt="Household" class="svg-icon"> Household
+            </a>
+        </div>
+    </div>
+    
+        <div class="content-container container mt-5">
+            <h2>About Carbon Footprint</h2>
+            <p>
+                Your carbon footprint is a measure of the total amount of greenhouse gases, primarily carbon dioxide (CO2),
+                that are released into the atmosphere as a result of your daily activities and lifestyle choices. These activities
+                include energy consumption, transportation, waste production, and more. Understanding your carbon footprint is
+                important for identifying areas where you can reduce your environmental impact and contribute to a more sustainable future.
+            </p>
+            <p>
+                By calculating and making conscious efforts to reduce your carbon footprint, you can help mitigate the effects of
+                climate change, conserve natural resources, and create a healthier planet for future generations.
+            </p>
+            <p>
+                Use our Carbon Footprint Calculator to assess the environmental impact of your car and household activities, and
+                learn how you can take steps to minimize your contribution to greenhouse gas emissions.
+            </p>
+        </div>
+    
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+{% load static %}
+{% include 'nav.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenMadurai</title>
+    <!-- Include Bootstrap CSS link here -->
+    <!-- Add your custom CSS styles here -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+
+        .carousel-item {
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+
+        .segment {
+            padding: 60px 0;
+        }
+
+        .segment h2 {
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+        /* Add this CSS to your <style> section */
+
+/* Adjust carousel image height for mobile devices */
+.carousel-item img {
+    height: auto;
+    max-width: 100%;
+}
+
+/* Adjust carousel caption font size for small screens */
+.carousel-caption {
+    font-size: 16px;
+}
+
+/* Center carousel captions on all screen sizes */
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Make carousel controls more accessible on small screens */
+.carousel-control-prev,
+.carousel-control-next {
+    font-size: 24px;
+    width: 10%;
+    opacity: 1;
+}
+
+/* Adjust carousel control position for small screens */
+.carousel-control-prev {
+    left: 0;
+}
+
+.carousel-control-next {
+    right: 0;
+}
+
+/* Hide carousel controls on extra small screens */
+@media (max-width: 576px) {
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none;
+    }
+}
+
+
+        .segment p {
+            font-size: 18px;
+        }
+
+        /* Light Theme */
+        .light-bg {
+            background: linear-gradient(to right, #E6FFED, #F0F0F0);
+        }
+        .light-text {
+            color: #000;
+        }
+
+        /* Dark Theme */
+        .dark-bg {
+            background: linear-gradient(to right, #F0F0F0, #E6FFED);
+        }
+        .dark-text {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- ... Your navigation code ... -->
+</nav>
+
+<!-- Carousel Section -->
+<!-- Add the following meta tag inside the <head> section to ensure proper scaling on mobile devices -->
+
+    <!-- ... Your existing code ... -->
+    
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'carousel/c2.jpg' %}" class="d-block w-100" alt="Carousel Image 1">
+            <div class="carousel-caption d-none d-md-block">
+              <!-- ... Your caption content ... -->
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'carousel/c1.jpg' %}" class="d-block w-100" alt="Carousel Image 2">
+            <div class="carousel-caption d-none d-md-block">
+              <!-- ... Your caption content ... -->
+            </div>
+          </div>
+          <!-- Add more carousel items as needed -->
+        </div>
+        <!-- Carousel controls -->
+    </div>
+    
+    <!-- ... Your existing code ... -->
+    
+<!-- Segment 1 (Light) -->
+<section class="segment light-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="content-left light-text">
+                    <h2 class="mb-4">Reducing Carbon Footprint</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, erat in malesuada tempor, felis nisi finibus dui.</p>
+                    <!-- Add more content as needed -->
+                </div>
+            </div>
+            <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                <div class="content-right">
+                    <a href="{% url 'carbon-footprint' %}">
+                    <button class="btn btn-primary">Learn More</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Segment 2 (Dark) -->
+<section class="segment dark-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 order-lg-2">
+                <div class="content-left dark-text">
+                    <h2 class="mb-4">Waste Management</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, erat in malesuada tempor, felis nisi finibus dui.</p>
+                    <!-- Add more content as needed -->
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1 d-flex align-items-center justify-content-center">
+                <div class="content-right">
+                    <a href="https://tnenvis.nic.in/Database/Waste_1169.aspx">
+                    <button class="btn btn-primary">Get Involved</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Segment 3 (Light) -->
+<section class="segment light-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="content-left light-text">
+                    <h2 class="mb-4">Sustainable Energy Solutions</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, erat in malesuada tempor, felis nisi finibus dui.</p>
+                    <!-- Add more content as needed -->
+                </div>
+            </div>
+            <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                <div class="content-right"><a href="{% url 'green_products' %}">
+                    <button class="btn btn-primary">Discover More</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ... Add more segments with the gradient effect ... -->
+
+<!-- ... Remaining code ... -->
+
+</body>
+</html>
